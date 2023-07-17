@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var score=0;
+        var flag=true;
+
+        while(flag){
+        //taking user input for guess
+        var userGuess=prompt("Enter your choice... 0 for Heads & 1 for Tails")
+        //generate random number between 0 and 1
+        var random= Math.round(Math.random());
+        //validation checking
+        // console.log(random);
+        if(userGuess==0 ||userGuess==1){
+            if(userGuess==random){
+                alert("You Win !!!");
+                score++;
+                // console.log(score)
+            }
+            else{
+                alert("You Lose..!!!")
+                // console.log("lose")
+                alert("Your Final Score is: "+score)
+            }
+        }
+        else{
+            alert("Enter Valid Choice... Restart the game..")
+            break;
+        }
+        
+        var game=prompt("do you want to continue?")
+                if(game=="y"||game=="Y"){
+                    flag=true;
+                }
+                else if(game=="n"||game=="N"){
+                    flag=false;
+                    alert("Your Final Score is: "+score)
+                }
+                else{
+                    alert("Invalid input");
+                }
+
+    }
+    </script>
+</body>
+</html>
